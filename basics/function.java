@@ -68,6 +68,7 @@ public class function {
     return a + b;
   }
 
+  //only for n>=2
   // public static boolean isPrime(int n){
   //   // corner case
   //   // 2
@@ -94,6 +95,49 @@ public class function {
 
     }
     return true;
+  }
+
+  //Print all Primes in Range
+  public static void primeInRange(int n){
+    for(int i = 2; i <= n; i++){
+      if(isPrime(i)){
+        System.out.print(i+" ");
+      }
+    }
+    System.out.println();
+  }
+
+  // convert from binary to decimal
+  public static void bintodec(int binNum){
+    int myNum = binNum;
+    int pow = 0;
+    int decNum = 0;
+
+    while(binNum > 0){
+      int lastDigit = binNum % 10;
+      decNum = decNum + (lastDigit * (int)Math.pow(2, pow));
+
+      pow++;
+      binNum = binNum / 10;
+    }
+    System.out.println("decimal of " + myNum +" = " + decNum);
+
+  }
+
+  //convert from decimal to binary
+  public static void dectobin(int decNum){
+    int myNum = decNum;
+    int pow = 0;
+    int binNum = 0;
+
+    while (decNum > 0) {
+      int rem = decNum % 2;
+      binNum = binNum + (rem * (int)Math.pow(10, pow));
+
+      pow++;
+      decNum = decNum / 2;
+    }
+    System.out.println("binary of " + myNum + " = " + binNum);
   }
 
   public static void main(String args[]){
@@ -135,7 +179,12 @@ public class function {
     // System.out.println(sum(5 , 3));
     // System.out.println(sum(4.8f , 3.2f));
 
-    System.out.println(isPrime(15));
+    // System.out.println(isPrime(15));
+    
+    // primeInRange(30);
+
+    // bintodec(101010);
+    dectobin(7);
 
 
   }
