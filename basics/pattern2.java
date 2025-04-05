@@ -178,6 +178,42 @@ public class pattern2 {
     }
   }
 
+  // Print Number_Pyramid
+  public static void Number_Pyramid(int n){
+    for(int i = 1; i <= n; i++){
+      // Spaces - (n - i)
+      for(int j = 1; j <= (n - i) ; j++){
+        System.out.print(" ");
+      }
+
+      // Numbers - i
+
+      for(int j = 1; j <= i ; j++){
+        System.out.print(i+ " ");
+      }
+      System.out.println();
+    }
+  }
+
+  // Print palindromic pattern with Numbers
+  public static void palindromic_pattern(int n){
+    for(int i = 1; i <= n ; i++){
+      // Spaces
+      for(int j = 1; j <= (n - i) ; j++){
+        System.out.print(" ");
+      }
+      // descending number
+      for(int j = i; j >= 1; j--){
+        System.out.print(j);
+      }
+      // Ascending number
+      for(int j = 2 ; j <= i; j++){
+        System.out.print(j);
+      }
+      System.out.println();
+    }
+  }
+
   public static void main(String args[]){
     // hollow_rectangle(4, 5);
     // Rotatedhalf_pyramid(4);
@@ -187,6 +223,8 @@ public class pattern2 {
     // ButterFly_pattern(4);
     // Solid_Rhombus(5);
     // hollow_rhombus(5);
-    diamond_pattern(4);
+    // diamond_pattern(4);
+    // Number_Pyramid(5);
+    palindromic_pattern(5);
   }
 }
