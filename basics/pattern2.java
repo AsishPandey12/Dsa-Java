@@ -201,7 +201,7 @@ public class pattern2 {
       // Spaces
       for(int j = 1; j <= (n - i) ; j++){
         System.out.print(" ");
-      }
+      } 
       // descending number
       for(int j = i; j >= 1; j--){
         System.out.print(j);
