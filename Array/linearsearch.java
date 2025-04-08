@@ -8,7 +8,7 @@ public class linearsearch {
         return i;
       }
     }
-    return 1;
+    return -1;
   }
   public static void main(String args[]){
     int numbers[] = {2, 4 , 6 , 8 , 10, 12 , 14 , 16};
