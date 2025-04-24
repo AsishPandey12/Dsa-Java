@@ -2,7 +2,9 @@ package Array;
 import java.util.*;
 
 public class Arraycc {
-  public static void update(int marks[] , int nonchangeable){
+  // Array is always pass by reference
+  // update marks using call by reference
+  public static void update(int marks[] , int nonchangeable){ // array as argument
     nonchangeable = 10;
     for(int i = 0 ; i < marks.length ; i++){
       marks[i] = marks[i] + 1;
