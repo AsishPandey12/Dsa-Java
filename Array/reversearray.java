@@ -2,17 +2,17 @@ package Array;
 
 public class reversearray {
   public static void reverse_array(int numbers[]){
-    int start = 0 , last = numbers.length-1;
+    int start = 0 , end = numbers.length-1;
 
-    while(start < last){
+    while(start < end){
       // Swap
 
-      int temp = numbers[last];
-      numbers[last] = numbers[start];
+      int temp = numbers[end];
+      numbers[end] = numbers[start];
       numbers[start] = temp;
       
       start++;
-      last--;
+      end--;
     }
 
   }
